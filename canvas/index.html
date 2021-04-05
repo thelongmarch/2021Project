@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            text-align: center;
+            padding-top: 20px;
+        }
+        canvas{
+            box-shadow: 0 0 10px #333;/* x偏移量 | y偏移量 | 阴影模糊半径 | 阴影颜色 */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body onload="draw()">
+    
+    <p>
+        <img src="http://qiniu.themarch.cn/canvas.png" alt="">
+    </p>    
+    <canvas id="canvas" width="800" height="600">
+        你的浏览器太low了，请更新！
+    </canvas>
+
+    <script>
+
+        function draw(){
+            let canvas  = document.getElementById('canvas')            
+            if(canvas.getContext){
+                //说明支持当前浏览器，在其中写代码。。。
+                let ctx = canvas.getContext('2d');
+
+                ctx.fillStyle='rgb(200,0,0)';
+                ctx.fillRect(10,10,350,300);
+
+                ctx.fillStyle='rgb(0,0,200,0.5)';
+                ctx.fillRect(30,30,350,300);
+                
+                
+
+            }
+        }
+       
+
+
+    </script>
+    
+</body>
+</html>
