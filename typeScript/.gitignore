@@ -1,0 +1,8 @@
+node_modules
+.vscode
+dist
+.idea
+jsconfig.json
+test.js
+.history
+global.js
