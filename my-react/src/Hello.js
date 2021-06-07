@@ -1,3 +1,6 @@
+import TodoList from './component/todoList/TodoList'
+
+
 
 //函数组件
 /* 
@@ -13,7 +16,13 @@ import React from "react";
 
 class App extends React.Component {
     render() {
-        return <p>hello111</p>
+        return (
+            <div>
+                 <TodoList/>
+                 <p>hello11</p>
+            </div>
+           
+        )
     }
 }
 
