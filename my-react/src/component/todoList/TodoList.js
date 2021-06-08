@@ -9,16 +9,14 @@ class TodoList extends Component {
             list:['1111','2222']
           }
 
-          //click
-        this.delete = this.delete.bind(this)
+          //click       
         this.add = this.add.bind(this)
     }
 
 
-    delete(index){
-        debugger
-        let list = this.state.list
-        console.log(list)
+    delete = (index)=>{
+        
+        let list = this.state.list      
         list.splice(index,1)
         this.setState({
             list:list
@@ -39,7 +37,7 @@ class TodoList extends Component {
                 <ul>
                     {
                         this.state.list.map((v,index)=>{
-                           return <li key={index.toString()}  onClick={this.delete.bind(this,index)}>{v}</li>
+                           return <li key={index.toString()}  onClick={()=>this.delete(index)}>{v}</li>
                         })
                     }
                     
