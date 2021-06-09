@@ -20,7 +20,10 @@ class TodoList extends Component {
         list.splice(index,1)
         this.setState({
             list:list
+        },()=>{
+            console.log(this.ul.querySelectorAll('li').length)
         })
+        
     }
 
     add(value){
@@ -34,7 +37,7 @@ class TodoList extends Component {
         return ( 
             <div>
                 <SearchBar list={this.state.list}  add={this.add}/>    
-                <ul>
+                <ul ref={(ul)=>this.ul = ul}>
                     {
                         this.state.list.map((v,index)=>{
                            return <li key={index.toString()}  onClick={()=>this.delete(index)}>{v}</li>
