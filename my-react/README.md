@@ -128,3 +128,8 @@ https://blog.csdn.net/wu_xianqiang/article/details/113521191
  </button>
 
 ```
+
+
+### es6动态计算属性名
+
+https://www.cnblogs.com/mengfangui/p/9150458.html
